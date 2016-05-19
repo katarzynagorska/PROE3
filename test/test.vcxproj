@@ -76,6 +76,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BeautyStudio.cpp" />
+    <ClCompile Include="Clinic.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -88,7 +90,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="HealthCareUnit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NailArtSaloon.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +120,12 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BeautyStudio.h" />
+    <ClInclude Include="Clinic.h" />
     <ClInclude Include="GeneratedFiles\ui_test.h" />
+    <ClInclude Include="HealthCareUnit.h" />
+    <ClInclude Include="NailArtSaloon.h" />
+    <ClInclude Include="utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="test.qrc">

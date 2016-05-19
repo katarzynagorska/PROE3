@@ -13,8 +13,16 @@ public:
 	~test();
 
 private slots:
-void handleClose();
-void handleAddClinic();
+void on_pushButtonClose_clicked();
+//left panel buttons
+void on_pushButtonEdit_clicked();
+void on_pushButtonAddThings_clicked();
+void on_pushButtonSave_clicked();
+//right panel buttons
+void on_pushButtonAddClinic_clicked();
+void on_pushButtonAddNails_clicked();
+void on_pushButtonAddBeauty_clicked();
+void on_pushButtonDelete_clicked();
 
 private:
 	Ui::Form ui;

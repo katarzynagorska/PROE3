@@ -50,6 +50,18 @@
     <ClCompile Include="GeneratedFiles\qrc_test.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="BeautyStudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Clinic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthCareUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NailArtSaloon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="test.h">
@@ -65,6 +77,21 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_test.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BeautyStudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Clinic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthCareUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NailArtSaloon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
