@@ -12,8 +12,12 @@ public:
 	test(QWidget *parent = 0);
 	~test();
 
+private slots:
+void handleClose();
+void handleAddClinic();
+
 private:
-	Ui::testClass ui;
+	Ui::Form ui;
 };
 
 #endif // TEST_H
