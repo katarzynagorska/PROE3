@@ -33,7 +33,6 @@ string BeautyStudio::infoToStr(){
 
 	string s;
 	s = "----Salon pieknosci----\n";
-	s += "Yankee Oscar Leema Oscar\n";
 	s += name + "\n";
 	s += address + "\n";
 	s += "Cena zabiegu: " + to_string(price);
@@ -48,8 +47,8 @@ string BeautyStudio::infoToStr(){
 string BeautyStudio::beauticiansToStr(){
 	string s;
 	s = "Kosmetyczki pracujace w salonie:\n";
-	for (int i = 0; i < int(beautician.size()); i++)
-		s+= beautician[i] +"\n";
+	for (string &b : beautician)// (int i = 0; i < int(beautician.size()); i++)
+		s+= b +"\n";
 	return s;
 }
 

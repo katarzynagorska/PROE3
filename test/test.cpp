@@ -5,6 +5,17 @@ test::test(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+	
+	ui.pushButtonEdit->setDisabled(true);
+	ui.pushButtonAddThings->setDisabled(true);
+	ui.pushButtonSave->setDisabled(true);
+	ui.lineEditEquipment->setDisabled(true);
+	ui.lineEditImage->setDisabled(true);
+	ui.lineEditName->setDisabled(true);
+	ui.lineEditPatient->setDisabled(true);
+	ui.lineEditService->setDisabled(true);
+	ui.lineEditWorker->setDisabled(true);
+	ui.lineEditPrice->setDisabled(true);
 
 }
 
@@ -40,3 +51,4 @@ void test::on_pushButtonAddBeauty_clicked(){
 void test::on_pushButtonDelete_clicked(){
 	ui.textBrowserInfo->setText("Wciœniêto Usuñ");
 }
+

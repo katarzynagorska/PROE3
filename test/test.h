@@ -1,6 +1,7 @@
 #ifndef TEST_H
 #define TEST_H
 
+#include <list>
 #include <QtWidgets/QMainWindow>
 #include "ui_test.h"
 
@@ -26,6 +27,7 @@ void on_pushButtonDelete_clicked();
 
 private:
 	Ui::Form ui;
+	list<HealthCareUnit*> myList;
 };
 
 #endif // TEST_H
