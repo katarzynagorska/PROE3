@@ -1,4 +1,7 @@
+#include <iostream>
+#include <qDebug>
 template <typename T> class myList;
+
 
 
 //Wêze³ listy
@@ -8,6 +11,7 @@ template <typename T> class myNode{
 
 public:
 	myNode(T);
+	myNode();
 	T getData(){ return data; }
 
 private:
@@ -17,12 +21,20 @@ private:
 };
 
 template <typename T>
-myNode<T>::myNode(T data)
+myNode<T>::myNode(T _data)
 {
-	this.data = data;
+	data = _data;
 	next = NULL;
 }
 
+template <typename T>
+myNode<T>::myNode(){
+	next = NULL
+}
+
+//****************************************************************************************************************************************
+//*
+//****************************************************************************************************************************************
 
 //Lista
 template <typename T> class myList{
@@ -30,12 +42,13 @@ public:
 	myList();
 	~myList();
 
-	void push_back(T &data);
-	///Method returning element at idx index
-//	T at(int idx);			
+	void push_back(T data);
+
 	void pop_back();
 	bool empty();
-	int size(){ return _size; }
+	int size(){ return _size; };
+
+	T& operator[](int idx);
 
 private:
 	myNode<T> *last, *first;
@@ -50,6 +63,23 @@ myList<T>::myList()
 	_size = 0;
 }
 
+template<typename T>
+myList<T>::~myList()
+{
+	if (!empty()) // List is not empty
+	{
+		myNode<T> *currentPtr = first;
+		myNode<T> *tempPtr;
+
+		while (currentPtr != 0) // delete remaining nodes
+		{
+			tempPtr = currentPtr;
+			currentPtr = currentPtr->next;
+			delete tempPtr;
+		}
+	}
+}
+
 template <typename T>
 bool myList<T>::empty()
 {
@@ -59,7 +89,7 @@ bool myList<T>::empty()
 template <typename T>
 void myList<T>::push_back(T data)
 {
-	myNode<T> *newPtr = new myNode(data);
+	myNode<T> *newPtr = new myNode<T>(data);
 	if(empty())	//Jeœli pusta to ostatni element 
 	{	
 		last = newPtr;
@@ -72,15 +102,9 @@ void myList<T>::push_back(T data)
 	}
 	_size++;
 }
-
+//TODO
 template <typename T>
 void myList<T>::pop_back()
-{
-	
-}
-
-template<typename T>
-myList<T>::~myList()
 {
 	if (!empty()) // List is not empty
 	{
@@ -89,9 +113,32 @@ myList<T>::~myList()
 
 		while (currentPtr != 0) // delete remaining nodes
 		{
+			if (currentPtr->next == NULL)
+			{
+
+			}
 			tempPtr = currentPtr;
 			currentPtr = currentPtr->nextPtr;
 			delete tempPtr;
 		}
+	}
+}
+
+template <typename T>
+T& myList<T>::operator[](int idx){
+	if ((idx > size()-1) || (idx < 0))
+	{
+		throw out_of_range("index out of range");
+		return last->next->data;
+	}
+	else
+	{
+
+		myNode<T> *currentPtr = first;
+		for (int i = 0; i < idx+1; i++)
+		{
+			currentPtr = currentPtr->next;
+		}
+		return currentPtr->data;
 	}
 }

@@ -1,5 +1,6 @@
 #include "test.h"
 #include "utilities.h"
+#include "MyList.h"
 
 test::test(QWidget *parent)
 	: QMainWindow(parent)
@@ -17,11 +18,29 @@ test::test(QWidget *parent)
 	ui.lineEditWorker->setDisabled(true);
 	ui.lineEditPrice->setDisabled(true);
 
+	/////////
+	/////////
+	myList<int> lista;
+	stringstream ss;
+
+	
+	for (int i = 0; i < 5; i++)
+		lista.push_back(10 * i);
+	
+	ss << "Rozmiar listy: " << lista.size() <<endl;
+	ss << "Lista: "; 
+	ss << lista[0] << "t1" <<endl;
+	for (int i = 0; i < lista.size(); i++)
+	{
+		ss << lista[i] << ".";
+	}
+	ss << "t2" << endl;
+	ui.textBrowserInfo->setText(QString::fromStdString(ss.str()));
 }
 
 test::~test()
 {
-
+//	this->destroy;
 }
 
 void test::on_pushButtonClose_clicked(){
