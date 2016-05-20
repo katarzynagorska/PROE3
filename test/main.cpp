@@ -1,6 +1,6 @@
 #include "test.h"
 #include <QtWidgets/QApplication>
-
+#include "MyList.h"
 
 int main(int argc, char *argv[])
 {

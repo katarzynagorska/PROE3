@@ -124,6 +124,7 @@
     <ClInclude Include="Clinic.h" />
     <ClInclude Include="GeneratedFiles\ui_test.h" />
     <ClInclude Include="HealthCareUnit.h" />
+    <ClInclude Include="MyList.h" />
     <ClInclude Include="NailArtSaloon.h" />
     <ClInclude Include="utilities.h" />
   </ItemGroup>
