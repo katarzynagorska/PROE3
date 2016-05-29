@@ -14,22 +14,6 @@ HealthCareUnit::~HealthCareUnit()
 {
 }
 
-void HealthCareUnit::getInfo()
-{
-	cout << "----Health Care Unit ----" << endl;
-	cout << name << endl;
-	cout << address << endl;
-}
-
-
-
-void HealthCareUnit::listEquipment()
-{
-	cout << "Wyposazenie obiektu: " << endl;
-	for (int i = 0; i <int( equipment.size()); i++)
-		cout << "- " << equipment[i] << endl;
-}
-
 string HealthCareUnit::equipToStr(){
 	string s;
 	s = "Wyposazenie obiektu:\n";
@@ -68,51 +52,4 @@ void HealthCareUnit::setAddress(string s)
 void HealthCareUnit::setName(string s)
 {
 	name = s;
-}
-
-istream & operator >> (istream & ist, HealthCareUnit & hcu)
-{
-	string s;
-
-//	ist >> hcu.name >>  hcu.address;
-	while (ist.peek() == 10) getline(ist, s); //Usuwanie zbednej nowej lini
-
-	while (getline(ist, s))
-	{
-		hcu.name = s;
-		break;
-	}
-
-	while (getline(ist, s))
-	{
-		hcu.address = s;
-		break;
-	}
-
-	while (getline(ist, s))
-	{	
-		hcu.equipment.push_back(s); // Poniewaz sa spacje i przecinki wykorzystuje getline
-
-		while (ist.peek() == 10) getline(ist, s); //usuniecie zbednych znakow nowej linii
-
-		if (char(ist.peek()) == '@')
-		{
-			getline(ist, s);
-			break;
-		}
-	}
-
-	while (ist.peek() == 10) getline(ist, s); //Usuwanie zbednej nowej lini
-
-	return ist;
-}
-
-ostream & operator<<(ostream & ost, HealthCareUnit & hcu)
-{
-	ost << hcu.name << endl << hcu.address << endl;
-
-	for (int i = 0; i < int(hcu.equipment.size()); i++)
-		ost << hcu.equipment[i] << endl;
-
-	return ost;
 }

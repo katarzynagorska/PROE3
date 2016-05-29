@@ -21,41 +21,24 @@ public:
 	BeautyStudio();
 	virtual ~BeautyStudio();
 
-	///Method that prints information about objetct to console
-	virtual void getInfo();
-
+	
 	///Method returning HCU info to string
 	virtual string infoToStr();
 
-	/** \brief Function for adding beautician to the list of workers
-	*  \param b - Beautician to be addesd to workers list
-	*/
+	
 	void addBeautician(string b);
 
-	/** \brief Function for removing beautician from the list of workers
-	*  \param b - Beautician to be removed from the workers list
-	*/
+	
 	void removeBeautician(string b);
 
-	///Function for printing workers list to console
-	void listBeauticians();
 	string beauticiansToStr();
 
-	/** \brief Function for setting up service price
-	*  \param price - New service price value
-	*/
+
 	void setPrice(int price);
 
 	///Function for printing service price to console
 	void getPrice();
 
-	/** \brief Insert formatted output
-	*/
-	friend ostream& operator << (ostream& ost, BeautyStudio& bs);
-
-	/** \brief Insert formatted input
-	*/
-	friend istream& operator >> (istream& ist, BeautyStudio& bs);
 
 protected:
 	vector<string> beautician;	///<list of workers

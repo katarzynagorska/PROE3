@@ -43,58 +43,6 @@ string Clinic::infoToStr(){
 	return ss.str();
 }
 
-void Clinic::getInfo()
-{
-	cout << "----Przychodnia----" << endl;
-	cout << name << endl;
-	cout << address << endl;
-	
-	listEquipment();
-
-	listPatients();
+void Clinic::addPatient(string _patient){
+	patients.push_back(_patient);
 }
-
-void Clinic::listPatients()
-{
-	cout << endl << "PACJENCI: " << endl;
-	for (int i = 0; i < int(patients.size()); i++)
-		cout << patients[i] << endl;
-}
-
-void Clinic::addPatient(string patient){
-	patients.push_back(patient);
-}
-
-//
-//ostream & operator<<(ostream & out, Clinic & c)
-//{
-//	out << (HealthCareUnit&)c << "@"<<endl;
-//	for (int i = 0; i < int(c.patients.size()); i++)
-//		out << c.patients[i];
-//	out << ";";
-//	return out;
-//}
-
-//istream & operator >> (istream & is, Clinic & c)
-//{
-//	is >> ((HealthCareUnit&)c);
-//
-//	string s;
-//	int i = 0;
-//
-//	while (1) {
-//		Patient p;
-//		c.patients.push_back(p);
-//
-//		is >> c.patients[i];
-//
-//		i++;
-//
-//		while (is.peek() == 10 || (char(is.peek()) == ';')) {
-//			getline(is, s); // usuniecie ze strumienia zbednych nowych lini i gwiazdki na koncu
-//
-//		}
-//		if (s == ";") break;
-//	}
-//	return is;
-//}

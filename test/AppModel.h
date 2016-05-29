@@ -1,5 +1,8 @@
 #include"MyList.h"
 #include"HealthCareUnit.h"
+#include "NailArtSaloon.h"
+#include "Clinic.h"
+#include "BeautyStudio.h"
 
 class AppModel{
 
@@ -19,7 +22,14 @@ public:
 		list[i]->setName(name);
 	}
 
+	bool clinicIsReady(){
+		return (clinic.)
+	}
+
 private:
 	myList<HealthCareUnit*> list;
+	Clinic clinic;
+	BeautyStudio beauty;
+	NailArtSaloon nails;
 
 };

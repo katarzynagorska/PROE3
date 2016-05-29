@@ -19,12 +19,13 @@ AppGui::~AppGui()
 //	this->destroy;
 }
 
+
 void AppGui::on_pushButtonClose_clicked(){
 	this->close();
 }
 //TODO okno ³adowania pliku;
 //za³adowanie obrazu
-void on_pushButtonBrowse_clicked(){
+void AppGui::on_pushButtonBrowse_clicked(){
 
 }
 

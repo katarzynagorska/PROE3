@@ -24,32 +24,18 @@ public:
 	///Destructor
 	virtual ~NailArtSaloon();
 
-	///Method for printing saloon's info to console
-	void getInfo();
-	/**
-	* \brief Method for adding service to service list
-	* \param service - name of service to be addedc
-	* \param price - cost of added service
-	*/
 	string infoToStr();
 	string servicesToStr();
 	void addService(string service, int price);
 
-	/**
-	* \brief Method for removing service from service list
-	* \param service - name of service to be removed
-	*/
+
 	void removeService(string service);
-	///Method for printing service list to console
-	void listService();
+
 
 	///Method for updating mean price for all services
 	void updateMeanPrice();
 
-	///Insert formatted output
-	friend ostream& operator << (ostream& ost, NailArtSaloon& nas);
-	///Insert formatted input 
-	friend istream& operator >> (istream &is, NailArtSaloon&nas);
+
 
 
 protected:
