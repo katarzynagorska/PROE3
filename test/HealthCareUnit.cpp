@@ -5,7 +5,6 @@ using namespace std;
 
 HealthCareUnit::HealthCareUnit()
 {
-	address = "";
 	name = "";
 }
 
@@ -42,11 +41,6 @@ void HealthCareUnit::removeEquipment(string eq)
 			idx = i;
 	if (idx >= 0)
 		equipment.erase(equipment.begin() + idx);
-}
-
-void HealthCareUnit::setAddress(string s)
-{
-	address = s;
 }
 
 void HealthCareUnit::setName(string s)

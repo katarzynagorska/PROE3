@@ -33,7 +33,6 @@ string Clinic::infoToStr(){
 	stringstream ss;
 	ss << "----Przychodnia----" << endl;
 	ss << name << endl;
-	ss << address << endl;
 
 	ss << equipToStr() <<  endl;
 

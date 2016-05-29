@@ -15,7 +15,6 @@ string randomBS(){
 	string s;
 	BeautyStudio b;
 
-	b.setAddress("AdresSalonuPieknosci_1");
 	b.setName("NazwaSalonuPieknosci_1");
 	b.setPrice(500);
 
@@ -37,7 +36,6 @@ string randomNAS(){
 	string s;
 	NailArtSaloon n;
 
-	n.setAddress("Adres");
 	n.setName("Name");
 
 	srand(time(NULL));
@@ -66,7 +64,6 @@ string randomC(){
 
 	int iRand = rand() % 3 + 3;
 
-	c.setAddress("Adres przychodni");
 	c.setName("Nazwa przychodni");
 
 

@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AppModel.cpp" />
     <ClCompile Include="BeautyStudio.cpp" />
     <ClCompile Include="Clinic.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_AppGui.cpp">
@@ -126,6 +127,7 @@
     <ClInclude Include="GeneratedFiles\ui_test.h" />
     <ClInclude Include="HealthCareUnit.h" />
     <ClInclude Include="MyList.h" />
+    <ClInclude Include="myNode.h" />
     <ClInclude Include="NailArtSaloon.h" />
     <ClInclude Include="utilities.h" />
   </ItemGroup>

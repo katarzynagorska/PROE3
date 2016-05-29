@@ -21,7 +21,6 @@ string NailArtSaloon::infoToStr(){
 	string s;
 	s = "----Studio paznokci----\n";
 	s += name + "\n";
-	s += address + "\n";
 	
 	s += "\n";
 	s += equipToStr();

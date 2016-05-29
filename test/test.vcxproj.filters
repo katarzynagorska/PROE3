@@ -62,6 +62,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_AppGui.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="AppModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="test.ui">
@@ -97,6 +100,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AppModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,9 +1,11 @@
+#pragma once
 #ifndef AppGui_H
 #define AppGui_H
 
 //#include <list>
 #include <QtWidgets/QMainWindow>
 #include "ui_test.h"
+#include "AppModel.h"
 
 class AppGui : public QMainWindow
 {
@@ -12,8 +14,6 @@ class AppGui : public QMainWindow
 public:
 	AppGui(QWidget *parent = 0);
 	~AppGui();
-
-	void deafultButtonConfig(bool b);
 
 	//Methods handling line edits stuff
 	QString getLine(QLineEdit *qle);
@@ -36,12 +36,13 @@ private slots:
 	void on_pushButtonAddNails_clicked();
 	void on_pushButtonAddBeauty_clicked();
 	void on_pushButtonDelete_clicked();
+	//listwidget
+	void on_listWidget_currentItemChanged();
 
 private:
 	Ui::Form ui;
-//	list<HealthCareUnit*> myList;
+	AppModel model;
 
-	//flags
 	bool editingC, editingBS, editingNAS;
 };
 

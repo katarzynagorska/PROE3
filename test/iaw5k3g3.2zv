@@ -2,14 +2,11 @@
 #include <qmessagebox.h>
 #include "utilities.h"
 #include "MyList.h"
-#include <iostream>
-
-using namespace std;
 
 AppGui::AppGui(QWidget *parent)	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	
+	ui.pushButtonClose->setEnabled(true);
 	//resetting all flags
 	editingBS = false;
 	editingNAS = false;
@@ -26,31 +23,21 @@ AppGui::~AppGui()
 void AppGui::on_pushButtonClose_clicked(){
 	this->close();
 }
+//TODO okno ³adowania pliku;
+//za³adowanie obrazu
+void AppGui::on_pushButtonBrowse_clicked(){
 
+}
 
-//left panel buttons - essential to saving new object
+//left panel buttons
 //Ustawienie nazwy obiektu
 void AppGui::on_pushButtonEdit_clicked(){
-	
-	QString newName = getLine(ui.lineEditName);
-		if (editingC){
-			model.getClinic().setName(newName.toStdString());
-		}
-		//else if (editingBS){
-		//	model.getBeauty().setName(newName.toStdString());
-		//}
-		//else if (editingNAS){
-		//	model.getNails().setName(newName.toStdString());
-		//}
-		else{
-			QMessageBox::critical(this, "Error", "Nie edytujesz ¿adnego obiektu");
-		}
+	ui.textBrowserInfo->setText("Wciœniêto Edytuj");
 }
 
 void AppGui::on_pushButtonSave_clicked(){
 
 	ui.textBrowserInfo->setText("Wciœniêto Save");
-	
 	if (editingC)
 	{
 		try{
@@ -58,10 +45,6 @@ void AppGui::on_pushButtonSave_clicked(){
 			{
 				Clinic newC = model.getClinic();
 				model.addObject(newC);
-				ui.textBrowserMyDebug->setText("Rozmiar listy " + QString::fromStdString(to_string(model.list.size())));
-				ui.textBrowserInfo->setText(QString::fromStdString(model.list.end()->infoToStr()));
-
-				new QListWidgetItem(QString::fromStdString(newC.getName()), ui.listWidget);
 			}
 		}
 		catch (QString *strErrMsg)
@@ -84,7 +67,7 @@ void AppGui::on_pushButtonSave_clicked(){
 		return;
 	}
 }
-//right panel buttons//Right panel buttons
+//right panel buttons
 void AppGui::on_pushButtonAddClinic_clicked(){
 	editingC = true;
 //	ui.textBrowserInfo->setText(QString::fromStdString(randomC()));
@@ -104,37 +87,7 @@ void AppGui::on_pushButtonDelete_clicked(){
 	ui.textBrowserInfo->setText("Wciœniêto Usuñ");
 	
 }
-//Right panel - list widget representing myLIst of HCU*
-void AppGui::on_listWidget_currentItemChanged(){
 
-	ui.textBrowserInfo->setText("Wybrano " + QString::fromStdString(to_string(ui.listWidget->currentRow())) + " pozycje na liscie\n"
-		+ "Lista ma " + QString::fromStdString(to_string(model.list.size())) + " pozycji\n");
-
-	QMessageBox::critical(this, "Error", "Y U NO WORK?");
-
-	ui.textBrowserMyDebug->setText(QString::fromStdString(model.list[0]->infoToStr()));
-	QMessageBox::critical(this, "Error", "DUPA2");
-	//for (int i = 0; i < model.list.size(); i++){
-	//	ui.textBrowserMyDebug->setText(QString::fromStdString(model.list.at(ui.listWidget->currentRow())->infoToStr()));
-	//	QMessageBox::critical(this, "Error", QString::fromStdString(model.list.at(ui.listWidget->currentRow())->infoToStr()));
-	//}
-
-
-	//cout << model.list.at(ui.listWidget->currentRow())->infoToStr() << endl;
-//	ui.textBrowserMyDebug->setText( "Dane obiektu z pozycji: " + QString::fromStdString(to_string(ui.listWidget->currentRow()))
-//		+ "\n" + QString::fromStdString(model.list.at(ui.listWidget->currentRow())->infoToStr()));
-
-//	ui.textBrowserMyDebug->setText(QString::fromStdString(model.list.at(ui.listWidget->currentRow())->infoToStr()));
-//	model.getHCU() = model.getObject(ui.listWidget->currentRow());
-//	ui.textBrowserMyDebug->setText("Rozmiar listy: "QString::fromStdString(model.getObject(ui.listWidget->currentRow()).infoToStr()));
-}
-//Left panel adding stuff to HCU's
-
-//TODO okno ³adowania pliku;
-//za³adowanie obrazu
-void AppGui::on_pushButtonBrowse_clicked(){
-
-}
 void AppGui::on_pushButtonAddPatient_clicked(){
 
 	ui.textBrowserInfo->setText(getLine((ui.lineEditPatient)));
@@ -152,7 +105,11 @@ void AppGui::on_pushButtonAddWorker_clicked(){
 	ui.textBrowserInfo->setText(getLine((ui.lineEditWorker)));
 }
 
-//Error MssgBoxes and stuff
+void AppGui::deafultButtonConfig(bool b){
+
+
+}
+
 void AppGui::tryLineEdit(QLineEdit *qle){
 	if (qle->text().isEmpty())
 		throw new QString("Wprowadz poprawna wartosc " + qle->objectName());

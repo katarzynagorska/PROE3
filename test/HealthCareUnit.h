@@ -33,13 +33,15 @@ public:
 
 	void removeEquipment(string eq);
 
-	void setAddress(string s);
 
 	void setName(string s);
 
+	string getName(){ return name; };
+
+
 
 protected:
-	string address;				///<Address
+
 	string name;				///<Name
 	vector <string>equipment;	///<List of equipment
 };

@@ -63,13 +63,14 @@ public:
     QPushButton *pushButtonDelete;
     QGraphicsView *graphicsView;
     QPushButton *pushButtonClose;
+    QTextBrowser *textBrowserMyDebug;
 
     void setupUi(QWidget *Form)
     {
         if (Form->objectName().isEmpty())
             Form->setObjectName(QStringLiteral("Form"));
         Form->setWindowModality(Qt::WindowModal);
-        Form->resize(861, 655);
+        Form->resize(868, 654);
         gridLayoutWidget_2 = new QWidget(Form);
         gridLayoutWidget_2->setObjectName(QStringLiteral("gridLayoutWidget_2"));
         gridLayoutWidget_2->setGeometry(QRect(10, 380, 351, 265));
@@ -184,7 +185,7 @@ public:
         pushButtonSave = new QPushButton(gridLayoutWidget_2);
         pushButtonSave->setObjectName(QStringLiteral("pushButtonSave"));
 
-        gridLayoutEdit->addWidget(pushButtonSave, 10, 0, 1, 3);
+        gridLayoutEdit->addWidget(pushButtonSave, 3, 0, 1, 3);
 
         textBrowserInfo = new QTextBrowser(Form);
         textBrowserInfo->setObjectName(QStringLiteral("textBrowserInfo"));
@@ -194,7 +195,7 @@ public:
         listWidget->setGeometry(QRect(370, 10, 481, 501));
         horizontalLayoutWidget = new QWidget(Form);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(370, 520, 481, 41));
+        horizontalLayoutWidget->setGeometry(QRect(370, 520, 493, 73));
         horizontalLayoutButtons = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayoutButtons->setObjectName(QStringLiteral("horizontalLayoutButtons"));
         horizontalLayoutButtons->setContentsMargins(0, 0, 0, 0);
@@ -223,7 +224,10 @@ public:
         graphicsView->setGeometry(QRect(10, 10, 351, 201));
         pushButtonClose = new QPushButton(Form);
         pushButtonClose->setObjectName(QStringLiteral("pushButtonClose"));
-        pushButtonClose->setGeometry(QRect(710, 570, 141, 41));
+        pushButtonClose->setGeometry(QRect(740, 580, 121, 41));
+        textBrowserMyDebug = new QTextBrowser(Form);
+        textBrowserMyDebug->setObjectName(QStringLiteral("textBrowserMyDebug"));
+        textBrowserMyDebug->setGeometry(QRect(370, 600, 361, 41));
 
         retranslateUi(Form);
 
@@ -233,12 +237,12 @@ public:
     void retranslateUi(QWidget *Form)
     {
         Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
-        labelChangeName->setText(QApplication::translate("Form", "Zmie\305\204 nazw\304\231", 0));
+        labelChangeName->setText(QApplication::translate("Form", "Zmie\305\204 nazw\304\231:", 0));
         labelAddImage->setText(QApplication::translate("Form", "Dodaj obraz:", 0));
-        labelAddService->setText(QApplication::translate("Form", "Dodaj us\305\202ug\304\231", 0));
+        labelAddService->setText(QApplication::translate("Form", "Dodaj us\305\202ug\304\231:", 0));
         labelAddPatient->setText(QApplication::translate("Form", "Dodaj pacjenta:", 0));
-        labelSetPrice->setText(QApplication::translate("Form", "Ustaw cen\304\231", 0));
-        labelAddWorker->setText(QApplication::translate("Form", "Dodaj pracownika", 0));
+        labelSetPrice->setText(QApplication::translate("Form", "Ustaw cen\304\231:", 0));
+        labelAddWorker->setText(QApplication::translate("Form", "Dodaj pracownika:", 0));
         labelAddEquipment->setText(QApplication::translate("Form", "Dodaj wyposa\305\274enie:", 0));
         pushButtonAddEquipement->setText(QApplication::translate("Form", "Dodaj", 0));
         pushButtonAddWorker->setText(QApplication::translate("Form", "Dodaj", 0));

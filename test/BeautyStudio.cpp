@@ -6,8 +6,6 @@
 
 BeautyStudio::BeautyStudio() : HealthCareUnit()
 {
-	name = "";
-	address = "";
 	price = 0;
 }
 
@@ -23,7 +21,6 @@ string BeautyStudio::infoToStr(){
 	string s;
 	s = "----Salon pieknosci----\n";
 	s += name + "\n";
-	s += address + "\n";
 	s += "Cena zabiegu: " + to_string(price);
 	s += "\n\n";
 	s += equipToStr();
