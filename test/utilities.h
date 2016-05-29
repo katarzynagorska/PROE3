@@ -6,7 +6,10 @@
 #include <sstream>
 #include<string>
 
-
+void ExceptionTest()
+{
+	throw new QString("Blad, nalezy zrobic inaczej");
+}
 
 string randomBS(){
 	string s;

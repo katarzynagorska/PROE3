@@ -38,15 +38,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_test.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_test.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\qrc_test.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
@@ -62,16 +53,25 @@
     <ClCompile Include="NailArtSaloon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AppGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AppGui.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AppGui.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="test.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="test.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="test.qrc">
       <Filter>Source Files\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AppGui.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +94,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AppModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
